@@ -1,0 +1,22 @@
+.ChessBoardLegend-legendGroup {
+    display: flex;
+    align-items: center;
+}
+
+.ChessBoardLegend .square {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.square.selected {
+    background-color: #4caf50;
+}
+
+.square.oneMove {
+    background-color: #ff5722;
+}
+
+.square.twoMoves {
+    background-color: #2196f3;
+}

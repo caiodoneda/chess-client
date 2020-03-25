@@ -1,0 +1,29 @@
+.Square {
+    width: 50px;
+    height: 50px;
+}
+
+.Square.black {
+    background-color: black;
+}
+
+.Square.white {
+    background-color: white;
+}
+
+.Square.oneMove {
+    background-color: #ff5722;
+}
+
+.Square.twoMoves {
+    background-color: #2196f3;
+}
+
+.Square:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 0, 0.62);
+}
+
+.Square.selected {
+    background-color: #4caf50;
+}

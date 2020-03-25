@@ -1,0 +1,23 @@
+.ChessBoardPage {
+    width: 100%;
+    height: 100vh;
+}
+
+.ChessBoardPage-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ChessBoardPage-board {
+    display: flex;
+    justify-content: center;
+}
+
+.ChessBoardPage-fetchButton {
+    cursor: pointer;
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    font-weight: bold;
+}

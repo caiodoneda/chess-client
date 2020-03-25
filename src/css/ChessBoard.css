@@ -1,0 +1,37 @@
+.ChessBoard {
+    width: 500px;
+    height: 500px;
+}
+
+.ChessBoard-squaresContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ChessBoard-squares {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.ChessBoard-lettersContainer {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.ChessBoard-letters {
+    width: 50px;
+    text-align: center;
+}
+
+.ChessBoard-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 50px;
+    text-align: center;
+}
