@@ -1,17 +1,21 @@
-import * as React from 'react';
-import classnames from 'classnames';
-import '../css/Square.css';
+import * as React from "react";
+import classnames from "classnames";
+import "../css/Square.css";
 
 export interface SquareProps {
-    styling: string;
-    blackSquare: boolean;
-    onClick: () => void;
+  styling: SquareStyle;
+  onClick: () => void;
+}
+
+export enum SquareStyle {
+  black = "black",
+  white = "white",
+  selected = "selected",
+  oneMove = "oneMove",
+  twoMoves = "twoMoves"
 }
 
 export default function Square(props: SquareProps) {
-    const classNames = classnames('Square', props.styling, {
-        black: props.blackSquare,
-        white: !props.blackSquare,
-    });
-    return <div onClick={props.onClick} className={classNames}></div>;
+  const classNames = classnames("Square", props.styling);
+  return <div onClick={props.onClick} className={classNames}></div>;
 }
