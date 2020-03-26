@@ -1,6 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ChessBoardPage from "./ChessBoardPage";
+import OnboardingPage from "./OnboardingPage";
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
             <ChessBoardPage />
           </Route>
           <Route path="/">
-            <div>App</div>
+            <OnboardingPage />
           </Route>
         </Switch>
       </Router>

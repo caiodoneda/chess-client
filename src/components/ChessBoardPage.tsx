@@ -3,8 +3,9 @@ import ChessBoard from "./ChessBoard";
 import ChessBoardLegend from "./ChessBoardLegend";
 import "../css/ChessBoardPage.css";
 import { Position, Moves } from "../types";
+import Button from "./Button";
 
-const VALID_MOVES_URL = "api/valid-moves";
+const VALID_MOVES_URL = "http://localhost:5000/api/valid-moves";
 const POSSIBLE_LETTERS = "ABCDEFGH";
 
 const parsePositionToAlgebraicNotation = (position: Position) =>
@@ -67,9 +68,7 @@ export default class ChessBoardPage extends React.Component<
   render() {
     return (
       <div className="ChessBoardPage">
-        <h2 className="ChessBoardPage-title">
-          Welcome to valid chess moves (Knight)
-        </h2>
+        <h2 className="ChessBoardPage-title">Valid Chess Moves (Knight)</h2>
         <div className="ChessBoardPage-board">
           <ChessBoard
             setPosition={this.setPosition}
@@ -77,13 +76,10 @@ export default class ChessBoardPage extends React.Component<
             moves={this.state.moves}
           />
           <div>
-            <ChessBoardLegend />
-            <button
-              className="ChessBoardPage-fetchButton"
-              onClick={this.fetchMoves}
-            >
-              Calculate Valid Moves
-            </button>
+            <div className="ChessBoardPage-legend">
+              <ChessBoardLegend />
+            </div>
+            <Button callback={this.fetchMoves}>Calculate Valid Moves</Button>
           </div>
         </div>
       </div>
