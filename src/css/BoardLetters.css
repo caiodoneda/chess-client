@@ -1,0 +1,10 @@
+.BoardLetters {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.BoardLetters-letter {
+  width: 50px;
+  text-align: center;
+}
