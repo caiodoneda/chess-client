@@ -16,3 +16,8 @@
 .ChessBoardPage-legend {
   margin-bottom: 50px;
 }
+
+.ChessBoardPage-apiError {
+  text-align: center;
+  color: red;
+}

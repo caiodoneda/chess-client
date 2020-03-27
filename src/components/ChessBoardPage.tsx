@@ -21,6 +21,7 @@ const parseAlgebraicNotationToPosition = (
 interface State {
   moves: Moves;
   position?: Position;
+  apiError: boolean;
 }
 
 interface ChessBoardProps {}
@@ -33,7 +34,8 @@ export default class ChessBoardPage extends React.Component<
     moves: {
       oneMove: [],
       twoMoves: []
-    }
+    },
+    apiError: false
   };
 
   fetchMoves = () => {
@@ -57,8 +59,9 @@ export default class ChessBoardPage extends React.Component<
           )
         };
 
-        this.setState({ moves: parsedMoves });
-      });
+        this.setState({ moves: parsedMoves, apiError: false });
+      })
+      .catch(() => this.setState({ apiError: true }));
   };
 
   setPosition = (position: Position) => {
@@ -82,6 +85,11 @@ export default class ChessBoardPage extends React.Component<
             <Button callback={this.fetchMoves}>Calculate Valid Moves</Button>
           </div>
         </div>
+        {this.state.apiError ? (
+          <p className="ChessBoardPage-apiError">
+            There was an error while fetching data from the API
+          </p>
+        ) : null}
       </div>
     );
   }
