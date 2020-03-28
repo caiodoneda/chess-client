@@ -80,7 +80,12 @@ export default class ChessBoardPage extends React.Component<
             <div className="ChessBoardPage-legend">
               <ChessBoardLegend />
             </div>
-            <Button callback={this.fetchMoves}>Calculate Valid Moves</Button>
+            <Button
+              disabled={this.state.position === undefined}
+              callback={this.fetchMoves}
+            >
+              Calculate Valid Moves
+            </Button>
           </div>
         </div>
         {this.state.apiError ? (
