@@ -5,7 +5,7 @@ import "../css/ChessBoardPage.css";
 import { Position, Moves } from "../types";
 import Button from "./Button";
 
-const VALID_MOVES_URL = "http://localhost:5000/api/valid-moves";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const POSSIBLE_LETTERS = "ABCDEFGH";
 
 const parsePositionToAlgebraicNotation = (position: Position) =>
@@ -45,9 +45,7 @@ export default class ChessBoardPage extends React.Component<
       this.state.position
     );
 
-    fetch(
-      `${VALID_MOVES_URL}?position=${algebraicNotationPosition}&piece=knight`
-    )
+    fetch(`${API_BASE_URL}valid-moves?position=${algebraicNotationPosition}`)
       .then(response => response.json())
       .then(moves => {
         const parsedMoves = {
@@ -87,7 +85,8 @@ export default class ChessBoardPage extends React.Component<
         </div>
         {this.state.apiError ? (
           <p className="ChessBoardPage-apiError">
-            There was an error while fetching data from the API
+            There was an error while fetching data from the API. It's possible
+            that the API is not up yet.
           </p>
         ) : null}
       </div>
