@@ -1,4 +1,23 @@
+# Valid chess moves client
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Valid chess moves is a React application that fetches valid chess moves from an API and displays on a board.
+
+# Project structure
+
+    ├── build                   # Compiled files
+    ├── public                  # Public files. (index.html, manifest.json ...)
+    ├── src                     # Source files
+        ├── assets              # Application assets. (Images, videos)
+        ├── components          # All components that can be reused
+        ├── css
+        ├── tests               # Automated tests
+        ├── types               # Application type definitions
+        ├── index.tsx           # Application entry point
+    ├── env.local.example       # Example file with local variables
+    ├── tsconfig.json           # Specifies the root files and the compiler options required to compile the project.
+    └── README.md
 
 ## Available Scripts
 
@@ -40,29 +59,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
