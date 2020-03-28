@@ -19,3 +19,13 @@
   max-width: 600px;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .OnboardingPage {
+    margin: 10px;
+  }
+
+  .OnboardingPage-carouselContainer {
+    margin: 20px 0;
+  }
+}
