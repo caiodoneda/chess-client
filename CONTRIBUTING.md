@@ -6,9 +6,9 @@ Fell free to create issues and submit new Pull requests.
 
 # Installation
 
-1 - Clone the repository using `https://github.com/caiodoneda/chess-client.git` or download the ZIP file.
-2 - cd chess-client/
-3 - run the command `npm install` to install all dependencies.
+- Clone the repository using `https://github.com/caiodoneda/chess-client.git` or download the ZIP file.
+- `cd chess-client/`
+- run the command `npm install` to install all dependencies.
 
 # Env variables
 
